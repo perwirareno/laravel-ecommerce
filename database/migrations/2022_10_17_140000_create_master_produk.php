@@ -15,12 +15,8 @@ class CreateMasterProduk extends Migration
     {
         Schema::create('tbl_reno_master_produk', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('no_polisi')->unique();
-            $table->string('kode_unik');
-            $table->integer('inorout')->comment('0=Masuk, 1=Keluar');
-            $table->timestamp('jam_masuk');
-            $table->timestamp('jam_keluar')->nullable();
-            $table->integer('biaya');
+            $table->string('nama_produk');
+            $table->string('gambar');
             $table->timestamps();
         });
     }
